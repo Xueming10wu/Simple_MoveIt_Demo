@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<robot name="abb">
+        <link name="link1">
+        <visual>
+            <origin xyz="-0.047 0.0158 -0.096" rpy="-1.5707963 0 -1.5707963" />
+            <geometry>
+                <mesh filename="package://abb_description/meshes/link1.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.047 0.0158 -0.096" rpy="-1.5707963 0 -1.5707963" />
+            <geometry>
+                <mesh filename="package://abb_description/meshes/link1.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint1" type="revolute">
+        <origin xyz="0 0 0.365" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.1415926" upper="3.1415926" effort="100" velocity="0.4" />
+        <parent link="link1"/>
+        <child link="link2"/>
+    </joint>
+
+
+    <link name="link2">
+        <visual>
+            <origin xyz="0 0 -0.028" rpy="0 0 -1.5707963" />
+            <geometry>
+                <mesh filename="package://abb_description/meshes/link2.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.028" rpy="0 0 -1.5707963" />
+            <geometry>
+                <mesh filename="package://abb_description/meshes/link2.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint2" type="revolute">
+        <origin xyz="0.181 0 0.201" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.5707963" upper="1.5707963" effort="100" velocity="0.4" />
+        <parent link="link2"/>
+        <child link="link3"/>
+    </joint>
+
+    <link name="link3">
+        <visual>
+            <origin xyz="0.104 0.065 -0.0136" rpy="-1.5707963 0.0355 3.1415926" />
+            <geometry>
+                <mesh filename="package://abb_description/meshes/link3.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.26" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.08 0.7"/>
+                <!--<mesh filename="package://abb_description/meshes/link3.STL" />-->
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint3" type="revolute">
+        <origin xyz="0 0 0.665" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.5707963" upper="1.5707963" effort="100" velocity="0.4" />
+        <parent link="link3"/>
+        <child link="link4"/>
+    </joint>
+
+
+    <link name="link4">
+        <visual>
+            <origin xyz="-0.184 -0.076 0.065" rpy="3.1415926 0 -1.5707963" />
+            <geometry>
+                <mesh filename="package://abb_description/meshes/link4.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.184 -0.076 0.065" rpy="3.1415926 0 -1.5707963" />
+            <geometry>
+                <mesh filename="package://abb_description/meshes/link4.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint4" type="revolute">
+        <origin xyz="0.172 0 0.17" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-1.5707963" upper="1.5707963" effort="100" velocity="0.4" />
+        <parent link="link4"/>
+        <child link="link5"/>
+    </joint>
+
+    <link name="link5">
+        <visual>
+          <origin xyz="-0.038 0 0" rpy="0 1.5707963 0" />
+            <geometry>
+                <mesh filename="package://abb_description/meshes/link5.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+        </visual>
+        <collision>
+          <origin xyz="-0.038 0 0" rpy="0 1.5707963 0" />
+            <geometry>
+                <mesh filename="package://abb_description/meshes/link5.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+
+    <joint name="joint5" type="revolute">
+        <origin xyz="0.63 0 0" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.7" upper="1.7" effort="100" velocity="0.4" />
+        <parent link="link5"/>
+        <child link="link6"/>
+    </joint>
+
+
+    <link name="link6">
+        <visual>
+          <origin xyz="0.09 -0.068 0" rpy="1.5707963 0 3.1415926" />
+            <geometry>
+                <mesh filename="package://abb_description/meshes/link6.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+        </visual>
+        <collision>
+          <origin xyz="0.09 -0.068 0" rpy="1.5707963 0 3.1415926" />
+            <geometry>
+                <mesh filename="package://abb_description/meshes/link6.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint6" type="revolute">
+        <origin xyz="0.18 0 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-3.1415926" upper="3.1415926" effort="100" velocity="0.4" />
+        <parent link="link6"/>
+        <child link="link7"/>
+    </joint>
+
+    <link name="link7">
+        <visual>
+            <origin xyz="-0.07 0 0" rpy="0 1.5707963 0" />
+            <geometry>
+                <mesh filename="package://abb_description/meshes/link7.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+        </visual>
+        <collision>
+          <origin xyz="0 0 -0.07" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://abb_description/meshes/link7.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+
+
+<!--
+    <link name="kinect_link">
+        <visual>
+            <origin xyz="0 0.016  0" rpy="-1.5708 0 3.1415926"/>
+            <geometry>
+                <mesh filename="package://abb_description/meshes/kinect.dae" />
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="kinect_joint" type="fixed">
+        <origin xyz="0.3 0.4 0.3" rpy="-1.83255 0 3.1415926"/>
+        <parent link="link1"/>
+        <child link="kinect_link"/>
+    </joint>
+-->
+
+</robot>
