@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+
+  <node ns="/kawasaki" pkg="kawasaki_driver" type="kawasaki_main" name="kawasaki_driver_node" respawn="false" output="screen"/>
+  <!--<node ns="/kawasaki" pkg="kawasaki_driver" type="kawasaki_main" name="kawasaki_driver_node" respawn="false"/>-->
+</launch>

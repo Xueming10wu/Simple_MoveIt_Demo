@@ -1,0 +1,11 @@
+<launch>
+    <!--tf不能忘-->
+    <include file="$(find kawasaki_description)/launch/kawasaki_description.launch"/>
+    
+    <!--硬件嵌入-->
+    <include file="$(find kawasaki_driver)/launch/kawasaki_hardware.launch"/>
+    
+    <!--moveit配置-->
+    <include file="$(find kawasaki_driver)/launch/load_config.launch"/>
+
+</launch>
