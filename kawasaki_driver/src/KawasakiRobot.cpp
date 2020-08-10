@@ -22,7 +22,7 @@ KawasakiRobot::KawasakiRobot( string name )
     stringstream ss; ss.clear(); ss.str("");
     for (size_t i = 0; i < joint_count; i++)
     {
-        ss << "joint" << i + 1;
+        ss << "joint" << i;
         joint_name[i] = ss.str();
         msg.name[i] = joint_name[i];
         ss.clear();ss.str("");
