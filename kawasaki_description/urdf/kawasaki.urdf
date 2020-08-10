@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<robot name="kawasaki">
+    <link name="link0">
+        <visual>
+            <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708" />
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/link0.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708" />
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/link0.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint0" type="revolute">
+        <origin xyz="0 0 0.1675" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.1415926" upper="3.1415926" effort="100" velocity="0.4" />
+        <parent link="link0"/>
+        <child link="link1"/>
+    </joint>
+
+    <link name="link1">
+        <visual>
+            <origin xyz="0 0 0.148" rpy="0 0 -1.5708" />
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/link1.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.148" rpy="0 0 -1.5708" />
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/link1.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint1" type="revolute">
+        <origin xyz="0.05 -0.0005 0.148" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-3.1415926" upper="3.1415926" effort="100" velocity="0.4" />
+        <parent link="link1"/>
+        <child link="link2"/>
+    </joint>
+
+    <link name="link2">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 -1.5708" />
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/link2.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 -1.5708" />
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/link2.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint2" type="revolute">
+        <origin xyz="0 0 0.1785" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.1415926" upper="3.1415926" effort="100" velocity="0.4" />
+        <parent link="link2"/>
+        <child link="link3"/>
+    </joint>
+
+    <link name="link3">
+        <visual>
+            <origin xyz="0 0 0.132" rpy="0 0 -1.5708" />
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/link3.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.132" rpy="0 0 -1.5708" />
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/link3.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint3" type="revolute">
+        <origin xyz="0 -0.0005 0.1325" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-3.1415926" upper="3.1415926" effort="100" velocity="0.4" />
+        <parent link="link3"/>
+        <child link="link4"/>
+    </joint>
+
+    <link name="link4">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 -1.5708" />
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/link4.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 -1.5708" />
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/link4.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+
+    <joint name="joint4" type="revolute">
+        <origin xyz="0 0 0.18025" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.1415926" upper="3.1415926" effort="100" velocity="0.4" />
+        <parent link="link4"/>
+        <child link="link5"/>
+    </joint>
+
+    <link name="link5">
+        <visual>
+            <origin xyz="0 0 0.12" rpy="0 0 -1.5708" />
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/link5.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.12" rpy="0 0 -1.5708" />
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/link5.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint5" type="revolute">
+        <origin xyz="0 -0.0005 0.1205" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-3.1415926" upper="3.1415926" effort="100" velocity="0.4" />
+        <parent link="link5"/>
+        <child link="link6"/>
+    </joint>
+
+    <link name="link6">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 -1.5708" />
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/link6.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 -1.5708" />
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/link6.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="joint6" type="revolute">
+        <origin xyz="0 0 0.1558" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.1415926" upper="3.1415926" effort="100" velocity="0.4" />
+        <parent link="link6"/>
+        <child link="link7"/>
+    </joint>
+
+    <link name="link7">
+        <visual>
+            <origin xyz="0 0 0.05" rpy="0 0 -1.5708" />
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/link7.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="0.75 0.75 0.75 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.05" rpy="0 0 -1.5708" />
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/link7.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+
+<!--
+    <link name="kinect_link">
+        <visual>
+            <origin xyz="0 0.016  0" rpy="-1.5708 0 3.1415926"/>
+            <geometry>
+                <mesh filename="package://kawasaki_description/meshes/kinect.dae" />
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="kinect_joint" type="fixed">
+        <origin xyz="0.3 0.4 0.3" rpy="-1.83255 0 3.1415926"/>
+        <parent link="link1"/>
+        <child link="kinect_link"/>
+    </joint>
+-->
+
+</robot>
